@@ -31,8 +31,8 @@ function draw() {
 
   let l1 = `Circle X= ${x}`;
   let l2 = `Circle Y= ${y}`;
-  let m1 = `Mouse X= ${mouseX}`;
-  let m2 = `Mouse Y= ${mouseY}`;
+  let m1 = `Mouse X= ${Math.trunc(mouseX)}`;
+  let m2 = `Mouse Y= ${Math.trunc(mouseY)}`;
 
   text(l1, 10, 30);
   text(l2, 10, 60);
