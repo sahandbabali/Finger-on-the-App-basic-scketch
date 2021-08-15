@@ -1,4 +1,4 @@
-var t = 100;
+var t = 10;
 
 var x = 100;
 var y = 100;
@@ -6,7 +6,7 @@ var y = 100;
 var mpressed = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
@@ -17,15 +17,15 @@ function draw() {
 
   if (
     mpressed == 1 &&
-    Math.abs(x - mouseX) <= 25 &&
-    Math.abs(y - mouseY) <= 25
+    Math.abs(x - mouseX) <= 50 &&
+    Math.abs(y - mouseY) <= 50
   ) {
     fill("green");
   } else {
     fill("red");
   }
 
-  circle(x, y, 50);
+  circle(x, y, 100);
 
   textSize(32);
 
@@ -41,7 +41,7 @@ function draw() {
 
   text(`Mouse Pressed: ${mpressed}`, 10, 150);
 
-  t = t + 0.001;
+  t = t + 0.0005;
 }
 
 function mousePressed() {
